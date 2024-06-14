@@ -43,7 +43,7 @@ To use VocabVault, simply clone the repository and open the `index.html` file in
 ```bash
 git clone https://github.com/AbdulMuhaiminIsmail/vocab-vault.git
 cd vocab-vault
-```
+
 ##Contributions
 
 Contributions are welcome! If you find any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request.
@@ -54,7 +54,7 @@ Contributions are welcome! If you find any issues or have suggestions for improv
     Push to the branch (git push origin feature/YourFeature).
     Open a pull request.
 
-#License
+##License
 
 This project is licensed under the MIT License.
 
