@@ -4,17 +4,13 @@ VocabVault is a comprehensive dictionary app designed to enhance your vocabulary
 
 ## Features
 
-### Meanings
+### Definitions
 
-VocabVault offers clear and concise meanings for each word. It provides multiple definitions to help you understand the different contexts in which a word can be used.
+VocabVault offers clear and concise definitions for each word. It provides multiple definitions to help you understand the different contexts in which a word can be used.
 
 ### Phonetics
 
-Learn the correct pronunciation of words with phonetic transcriptions and audio pronunciations. Improve your speaking and listening skills effortlessly.
-
-### Definitions
-
-Access detailed definitions of words to gain a deeper understanding of their usage and nuances in different contexts.
+Learn the correct pronunciation of words with phonetic transcriptions.
 
 ### Synonyms
 
