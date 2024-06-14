@@ -29,9 +29,6 @@ Explore antonyms (words with opposite meanings) to understand contrasts and expa
 2. **View Results:**
    - Once the word is searched, VocabVault displays meanings, phonetics, definitions, synonyms, and antonyms in an organized manner.
 
-3. **Explore Further:**
-   - Click on any synonym or antonym to explore its own meanings, phonetics, definitions, synonyms, and antonyms.
-
 ## Installation
 
 To use VocabVault, simply clone the repository and open the `index.html` file in your web browser.
@@ -41,7 +38,7 @@ git clone https://github.com/AbdulMuhaiminIsmail/vocab-vault.git
 cd vocab-vault
 ```
 
-##Contributions
+## Contributions
 
 Contributions are welcome! If you find any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request.
 
@@ -51,11 +48,14 @@ Contributions are welcome! If you find any issues or have suggestions for improv
     Push to the branch (git push origin feature/YourFeature).
     Open a pull request.
 
-##License
+## License
 
 This project is licensed under the MIT License.
 
-##Acknowledgments
+## Acknowledgments
+
+ This app uses [Free Dictionary API] (https://dictionaryapi.dev/) for fetching word data.
+ Special thanks to contributors and developers who helped improve this project.
 
     This app uses [Free Dictionary API](https://dictionaryapi.dev/) for fetching word data.
     Special thanks to the API developers who helped make this project.
