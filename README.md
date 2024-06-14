@@ -43,6 +43,7 @@ To use VocabVault, simply clone the repository and open the `index.html` file in
 ```bash
 git clone https://github.com/AbdulMuhaiminIsmail/vocab-vault.git
 cd vocab-vault
+```
 
 ##Contributions
 
