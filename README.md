@@ -56,6 +56,3 @@ This project is licensed under the MIT License.
 
  This app uses [Free Dictionary API] (https://dictionaryapi.dev/) for fetching word data.
  Special thanks to contributors and developers who helped improve this project.
-
-    This app uses [Free Dictionary API](https://dictionaryapi.dev/) for fetching word data.
-    Special thanks to the API developers who helped make this project.
