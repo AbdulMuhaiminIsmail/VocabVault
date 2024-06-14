@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #ff414e; 
+    background-color: #4A90E2; 
     font-family: "Rubik";
     color: black;
     display: flex;
@@ -30,12 +30,12 @@ h1, h2, h3 {
 
 h1 {
     font-size: 36px;
-    color: #ff414e;
+    color: #4A90E2;
 }
 
 h2 {
     font-size: 24px;
-    color: #ff414e;
+    color: #4A90E2;
 }
 
 p {
@@ -66,8 +66,8 @@ p {
 
 #searchButton {
     padding: 10px 20px;
-    font-size: 16px;
-    background-color: #ff414e;
+    font-size: 20px;
+    background-color: #4A90E2;
     color: white;
     border: none;
     border-radius: 5px;

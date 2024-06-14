@@ -12,16 +12,7 @@ let URL = `https://api.dictionaryapi.dev/api/v2/entries/en/dictionary`;
 
 //Search click handler
 const searchButton = document.getElementById("searchButton");
-searchButton.addEventListener("click", () => {
-    requestedWord = document.getElementById("searchInput").value;
-    if(requestedWord) {
-        URL = `https://api.dictionaryapi.dev/api/v2/entries/en/${requestedWord}`;
-        process(requestedWord);
-    }
-    else {
-        alert("Enter a word to search");
-    }
-})
+searchButton.addEventListener("click", handleInteraction);
 
 //Search hover handler
 searchButton.addEventListener("mouseover", () => {
@@ -30,9 +21,31 @@ searchButton.addEventListener("mouseover", () => {
 
 //Mouseout
 searchButton.addEventListener("mouseout", () => {
-    searchButton.style.background = '#ff414e';
+    searchButton.style.background = '#4A90E2';
 })
 
+//Enter key handler
+const searchInput = document.getElementById('searchInput');
+searchInput.addEventListener("keypress", (e) => {
+    if(e.key === 'Enter') {
+        handleInteraction();
+    }
+})
+
+//Interaction Handler
+function handleInteraction () {
+    //Making URL ready for API Call and throwing alert in case no word has been entered
+    requestedWord = document.getElementById("searchInput").value;
+    if(requestedWord) {
+        URL = `https://api.dictionaryapi.dev/api/v2/entries/en/${requestedWord}`;
+        process(requestedWord);
+    }
+    else {
+        alert("Enter a word to search");
+    }
+}
+
+//Data Fetcher
 async function fetchData () {
 
     //Sending an API request
@@ -74,10 +87,13 @@ async function fetchData () {
     }
 }
 
+//Data Setter
 function setData() {
+    //Setting word to the requestedWord
     let wordHTML = document.getElementById('word');
     wordHTML.innerText = requestedWord;
 
+    //Exception Handling with phonetic
     let phoneticHTML = document.getElementById('phonetic');
     if(phonetic) {
         phoneticHTML.innerText = "(" + phonetic + ")";
@@ -86,6 +102,7 @@ function setData() {
         phoneticHTML.innerText = "(Phonetic Not Found)";
     }
 
+    //Clearing previous data and appending new defs with associated parts of speech
     let definitionsHTML = document.querySelector('.definitions');
     definitionsHTML.innerHTML = '';
     for(let x = 0; x < meaningsCount; x++) {
@@ -94,12 +111,14 @@ function setData() {
         definitionsHTML.appendChild(currentDef);
     }
 
+    //Clearing previous data and adding new synonyms
     let synonymsHTML = document.querySelector('.synonyms');
     synonymsHTML.innerHTML = '';
     let newSyns = document.createElement('p');
     (synonyms.length) ? newSyns.innerText = synonyms.toString() : newSyns.innerText = "No synonyms found for " + requestedWord;
     synonymsHTML.appendChild(newSyns);
 
+    //Clearing previous data and adding new antonyms
     let antonymsHTML = document.querySelector('.antonyms');
     antonymsHTML.innerHTML = '';
     let newAnts = document.createElement('p');
@@ -107,6 +126,8 @@ function setData() {
     antonymsHTML.appendChild(newAnts);
 
 }
+
+//Processor
 async function process() {
     await fetchData();
     setData();
